@@ -1,0 +1,187 @@
+/*a,div,p,ul,textarea,ol,li,br,section,input,span {
+	border:  solid 1px red;
+}*/
+.container{
+	text-align: center;
+}
+
+.calc-wrap{
+	display: inline-block;
+	position: relative;
+	width: 330px;
+	text-align: center;
+	padding: 15px;
+	background-color: #4D4D4D;
+
+	textarea {
+		width: 300px;
+		font-weight: bold;
+		resize: none; 
+		margin-bottom: 15px;
+		text-transform:uppercase;
+		text-align: center;
+    	background-color: #333333;
+    	border: none;
+    	line-height: 30px;
+    	padding-top: 20px;
+    	padding-bottom: 10px;
+	}
+
+  >div{
+     display: inline-flex;  
+  }
+
+}
+
+.markErr{
+	font-size: 20px;
+	color: red;
+}  
+
+.markOk{
+	font-size: 28px;
+	color: #fff;
+}  
+
+
+.calc-btn-group{
+	display: inline-block;
+	background-color: #333333;
+}
+
+
+.calc-btn-panel{
+	list-style: none;
+	margin-left: 0;
+	padding-left: 0;
+	display: flex;
+	flex-wrap:wrap;
+	align-items: center;   
+    justify-content:center;	
+    width: 240px;
+
+
+   li{
+
+	width: 60px;
+	height: 60px;
+	display: flex;
+	align-items: center;   
+    justify-content:center;	
+    cursor: pointer;
+    border: solid 1px grey;
+    	>span{
+ 			cursor: pointer;
+ 			font-size: 28px;
+ 			font-weight: bold;
+    		color: #fff;
+   			transition: 0.3s all;
+		}
+	
+   }
+
+}
+
+.calc-btn-panel   li:hover {
+	background-color: green;
+}
+
+.calc-btn-panel   li:hover >span{
+
+    transition: 0.3s all;
+ 	transform: scale(1.1);
+ 	animation: 2s linear 0s normal none infinite running anim-key;
+}
+
+.calc-panel-row{
+ 	flex-direction:row;
+ 	margin-bottom: 0;
+}
+
+.calc-panel-column{
+    flex-direction:column;
+}
+ 
+
+.calc-btn-rigt-panel{
+	list-style: none;
+	margin-left: 0;
+	padding-left: 0;
+	display: inline-flex;
+	flex-wrap:wrap;
+	align-items: center;   
+    justify-content:center;	
+    margin-bottom: 0;
+    background-color: #333333;
+
+
+  li {
+	 width: 60px;
+	 height: 60px;
+	 display: flex;
+	 align-items: center;   
+     justify-content:center;	
+     cursor: pointer;
+     border: solid 1px grey;
+     background-color: #ff9933;
+     z-index: 22;
+
+     	>span{
+ 
+ 			cursor: pointer;
+ 			font-size: 28px;
+ 			font-weight: bold;
+    		color: #fff;
+   			transition: 0.3s all;
+   			color: #000;
+   			z-index: 1;
+		}
+
+   }
+
+
+}
+
+   .calc-btn-rigt-panel :hover {
+		background-color: #333333;
+   }
+
+    #key-Equa{
+
+   	   background-color: #ff0000;
+       transition: 0.3s all;
+       z-index: 2;
+	   		
+   	}	
+
+    #key-Equa:hover{
+        transition: 0.3s all;
+    	background-color: green;
+  
+  	 }
+
+	#key-Equa:hover>span{
+		color: #fff;
+		background: none;
+     } 
+
+    .calc-btn-rigt-panel:hover >span {
+
+ 	    transition: 0.3s all;
+ 		transform: scale(1.1);
+ 		animation: 2s linear 0s normal none infinite running anim-key;
+    }
+
+    .calc-btn-rigt-panel li:hover>span {
+	    color: #fff;
+    }
+
+
+@keyframes anim-key {
+     from {
+        transform:rotateY(0deg);
+    }
+     to {
+        transform:rotateY(360deg);
+    }
+}
