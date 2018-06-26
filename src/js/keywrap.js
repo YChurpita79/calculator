@@ -1,6 +1,5 @@
 
 class KeyWrap{
-
 	constructor(aVal){
 		this.KeyEl;
 	   	this.KeyId = aVal;
@@ -8,7 +7,7 @@ class KeyWrap{
 	    this.KeyInit = this.KeyInit.bind(this);
 	    this.KeyDecodePrint=this.KeyDecodePrint.bind(this);
    };
-
+	
    KeyInit(){
        try{
            this.KeyEl = document.getElementById(this.KeyId);
